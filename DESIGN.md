@@ -12,6 +12,8 @@ These are combined with one semantic palette throughout each theme. Lavender is 
 
 The hero's pointer response lets visitors explore the sculpture's perspective and light. Project filters reduce the collection to a reader's interest, dialogs reveal real technical detail, and accordions keep background information scannable. Motion respects the system preference and can be paused. Native scrolling and pointer behavior remain intact.
 
-Fonts: self-hosted Manrope and IBM Plex Mono, with their OFL licenses in `dist/assets/`. The sculpture is an original image generated with the built-in image generation tool. Final asset: `dist/assets/sculpture.jpg`.
+The project section uses an interactive explorer in place of the initial staggered gallery. A horizontal project selector controls a large preview and a clear description with direct links to the live app and repository. Screenshots keep their complete aspect ratio without rotation or cropping. On phones, the selector becomes a compact grid and each preview stacks above its description. Research results and the original PillPal icon are presented as the assets they are, without inventing app screens.
+
+Fonts: self-hosted Manrope and IBM Plex Mono, with their OFL licenses in `docs/assets/`. The sculpture is an original image generated with the built-in image generation tool. Final asset: `docs/assets/sculpture.jpg`.
 
 Image prompt: A single sculptural continuous loop made from polished liquid chrome and smoked glass, folded like a soft torus knot, isolated floating in a warm near-black void. Museum object photography, subtle violet, sage, amber, and copper reflections, one lavender rim light, warm cream highlights, no text, no stars, no grid, no watermark. Landscape composition for a developer portfolio hero.

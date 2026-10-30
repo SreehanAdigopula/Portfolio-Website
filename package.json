@@ -1,1 +1,1 @@
-{"name":"sreehan-adigopula-portfolio","version":"1.0.0","private":true,"description":"Interactive portfolio built with native HTML, CSS, and JavaScript.","scripts":{"start":"node server.mjs","check":"node --check dist/app.js && node --check server.mjs"},"engines":{"node":">=20"}}
+{"name":"sreehan-adigopula-portfolio","version":"1.0.0","private":true,"description":"Interactive portfolio built with native HTML, CSS, and JavaScript.","scripts":{"start":"node server.mjs","check":"node --check docs/app.js && node --check server.mjs"},"engines":{"node":">=20"}}

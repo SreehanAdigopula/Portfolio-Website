@@ -38,16 +38,42 @@ hero.addEventListener('pointerleave', () => { cancelAnimationFrame(pointerFrame)
 const observer = new IntersectionObserver(entries => { for (const entry of entries) if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }, {threshold:0.07});
 selectAll('.reveal').forEach(el => observer.observe(el));
 
-const grid = select('.project-grid');
+const projectTabs = selectAll('[data-project-tab]');
+let projectFilter = 'all';
+let selectedProject = 'friction';
+function showProject(id) {
+  selectedProject = id;
+  projectTabs.forEach(tab => {
+    const active = tab.dataset.projectTab === id;
+    tab.setAttribute('aria-selected', String(active));
+    tab.tabIndex = active ? 0 : -1;
+  });
+  selectAll('[data-project-panel]').forEach(panel => {
+    const active = panel.dataset.projectPanel === id;
+    panel.hidden = !active;
+    panel.classList.toggle('active-project', active);
+  });
+}
+projectTabs.forEach(tab => {
+  tab.addEventListener('click', () => showProject(tab.dataset.projectTab));
+  tab.addEventListener('keydown', event => {
+    const visible = projectTabs.filter(t => !t.hidden);
+    const index = visible.indexOf(tab);
+    let next;
+    if (event.key === 'ArrowRight') next = visible[(index + 1) % visible.length];
+    if (event.key === 'ArrowLeft') next = visible[(index + visible.length - 1) % visible.length];
+    if (event.key === 'Home') next = visible[0];
+    if (event.key === 'End') next = visible.at(-1);
+    if (next) { event.preventDefault(); showProject(next.dataset.projectTab); next.focus(); }
+  });
+});
 selectAll('.filter').forEach(button => button.addEventListener('click', () => {
-  const filter = button.dataset.filter;
+  projectFilter = button.dataset.filter;
   selectAll('.filter').forEach(b => { const active = b === button; b.classList.toggle('active', active); b.setAttribute('aria-pressed', String(active)); });
-  let count=0;
-  selectAll('.project').forEach(project => { project.hidden = filter !== 'all' && !project.dataset.category.split(' ').includes(filter); if (!project.hidden) { count++; project.classList.add('visible'); } });
-  grid.classList.toggle('filtered', filter !== 'all');
-  grid.classList.remove('filtering');
-  requestAnimationFrame(() => grid.classList.add('filtering'));
-  select('.project-count').textContent = `${count} ${count === 1 ? 'project' : 'projects'}`;
+  const available = selectAll('[data-project-panel]').filter(panel => projectFilter === 'all' || panel.dataset.category.split(' ').includes(projectFilter)).map(panel => panel.dataset.projectPanel);
+  projectTabs.forEach(tab => { tab.hidden = !available.includes(tab.dataset.projectTab); });
+  showProject(available.includes(selectedProject) ? selectedProject : available[0]);
+  select('.project-count').textContent = `${available.length} ${available.length === 1 ? 'project' : 'projects'}`;
 }));
 
 const skillTabs=selectAll('[data-skill]');
