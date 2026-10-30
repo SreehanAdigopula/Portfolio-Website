@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#100e0d">
+  <title>Sreehan Adigopula | Curiosity, put to work.</title>
+  <meta name="description" content="Sreehan Adigopula's selected work in software, cybersecurity, and machine learning. Explore Friction, SecureStart, TLS research, and PillPal.">
+  <meta property="og:title" content="Sreehan Adigopula | Curiosity, put to work.">
+  <meta property="og:description" content="Practical software, cybersecurity research, and a habit of asking better questions.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/sculpture.jpg">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/manrope.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/sculpture.jpg" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a href="#home" class="wordmark" aria-label="Sreehan Adigopula, home">sa<span>.</span></a>
+    <nav aria-label="Main navigation" id="main-nav">
+      <a href="#work">Selected work</a>
+      <a href="#about">About</a>
+      <a href="#background">Background</a>
+      <a href="#contact">Get in touch <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="nav-controls">
+      <button id="theme-toggle" class="quiet-button" aria-label="Switch to light theme">Light</button>
+      <button id="motion-toggle" class="quiet-button" aria-pressed="false" aria-label="Pause decorative motion">Pause motion</button>
+      <button id="menu-toggle" class="quiet-button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section-wrap" id="home" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow hero-name">Sreehan Adigopula</p>
+        <h1 id="hero-title">Curiosity,<br>put to work<span class="accent">.</span></h1>
+        <p class="hero-intro">I'm a student building practical software at the intersection of cybersecurity, machine learning, and everyday life.</p>
+        <a class="button button-primary" href="#work">Selected work <span aria-hidden="true">↘</span></a>
+      </div>
+      <div class="hero-art" id="hero-art" aria-hidden="true">
+        <div class="sculpture-movement"><img class="sculpture" src="assets/sculpture.jpg" alt="" width="1536" height="1024" fetchpriority="high"></div>
+        <div class="light-response"></div>
+      </div>
+    </section>
+
+    <section id="work" class="work section-wrap section-space" aria-labelledby="work-title">
+      <div class="section-heading reveal">
+        <h2 id="work-title">Ideas made<br><span class="muted">tangible.</span></h2>
+        <p>Apps, experiments, and research. Built around something worth figuring out.</p>
+      </div>
+      <div class="work-toolbar">
+        <div class="filters" role="group" aria-label="Filter projects">
+          <button class="filter active" data-filter="all" aria-pressed="true">All work</button>
+          <button class="filter" data-filter="application" aria-pressed="false">Applications</button>
+          <button class="filter" data-filter="security" aria-pressed="false">Cybersecurity</button>
+          <button class="filter" data-filter="research" aria-pressed="false">Research</button>
+        </div>
+        <span class="project-count" role="status" aria-live="polite">4 projects</span>
+      </div>
+      <div class="project-grid">
+        <article class="project project-wide reveal" data-category="application" id="project-friction">
+          <button class="project-media media-friction" data-project="friction" aria-label="Explore Friction project">
+            <img src="assets/friction.png" alt="Friction's hand-drawn focus dashboard and pet buddy" width="1280" height="720" loading="lazy">
+            <span class="media-action" aria-hidden="true">Explore <span>↗</span></span>
+          </button>
+          <div class="project-meta"><span>Web application</span><span>JavaScript</span></div>
+          <div class="project-heading"><h3>Friction</h3><button class="project-open" data-project="friction" aria-label="Explore Friction project">↗</button></div>
+          <p>A focus app that works with your patterns, complete with a pet to grow alongside you.</p>
+        </article>
+        <article class="project project-offset reveal" data-category="application security" id="project-securestart">
+          <button class="project-media media-security" data-project="securestart" aria-label="Explore SecureStart project">
+            <img src="assets/securestart.png" alt="SecureStart cybersecurity readiness assessment website" width="1280" height="720" loading="lazy">
+            <span class="media-action" aria-hidden="true">Explore <span>↗</span></span>
+          </button>
+          <div class="project-meta"><span>Cybersecurity</span><span>Web application</span></div>
+          <div class="project-heading"><h3>SecureStart</h3><button class="project-open" data-project="securestart" aria-label="Explore SecureStart project">↗</button></div>
+          <p>Practical security guidance for small organizations, without the jargon.</p>
+        </article>
+        <article class="project project-research reveal" data-category="security research" id="project-tls">
+          <button class="project-media media-research" data-project="tls" aria-label="Explore TLS Security Research project">
+            <img src="assets/tls-results.png" alt="Actual grouped evaluation confusion matrix from the TLS research repository" width="1200" height="1040" loading="lazy">
+            <span class="media-action" aria-hidden="true">Explore <span>↗</span></span>
+          </button>
+          <div class="project-meta"><span>Independent research</span><span>Python / ML</span></div>
+          <div class="project-heading"><h3>TLS Security Research</h3><button class="project-open" data-project="tls" aria-label="Explore TLS Security Research project">↗</button></div>
+          <p>Testing what observable TLS features can tell us about a website's security configuration.</p>
+        </article>
+        <article class="project project-pillpal reveal" data-category="application" id="project-pillpal">
+          <button class="project-media media-pillpal" data-project="pillpal" aria-label="Explore PillPal project">
+            <img src="assets/pillpal.png" alt="PillPal's original app icon" width="512" height="512" loading="lazy">
+            <span class="media-action" aria-hidden="true">Explore <span>↗</span></span>
+          </button>
+          <div class="project-meta"><span>iOS application</span><span>Medication reminders</span></div>
+          <div class="project-heading"><h3>PillPal</h3><button class="project-open" data-project="pillpal" aria-label="Explore PillPal project">↗</button></div>
+          <p>A medication-reminder app designed to make everyday routines easier to keep.</p>
+        </article>
+      </div>
+      <div class="work-footer reveal"><span>There's more in the repository.</span><a class="text-link" href="https://github.com/SreehanAdigopula?tab=repositories" target="_blank" rel="noopener noreferrer">Explore GitHub <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section class="about section-wrap section-space" id="about" aria-labelledby="about-title">
+      <div class="about-heading reveal"><p class="eyebrow">The person behind the projects</p><h2 id="about-title">Always asking<br><span class="muted">“What if?”</span></h2></div>
+      <div class="about-content reveal">
+        <p class="large-copy">I like pulling a problem apart, trying a few approaches, and making something people can actually use.</p>
+        <p>I'm a senior at West Windsor-Plainsboro High School South, Class of 2027. My interests span computer science, cybersecurity, AI, and business.</p>
+        <p>That curiosity has taken me from hardening Windows systems in CyberPatriot to studying cyber operations at MIT Beaver Works Summer Institute. Outside of code, I tutor, volunteer, and help lead student discussions through Dialogues Club.</p>
+        <div class="skill-switcher">
+          <div class="skill-tabs" role="tablist" aria-label="Areas of practice">
+            <button role="tab" id="tab-build" aria-controls="panel-build" aria-selected="true" tabindex="0" data-skill="build">Build</button>
+            <button role="tab" id="tab-secure" aria-controls="panel-secure" aria-selected="false" tabindex="-1" data-skill="secure">Secure</button>
+            <button role="tab" id="tab-explore" aria-controls="panel-explore" aria-selected="false" tabindex="-1" data-skill="explore">Explore</button>
+          </div>
+          <div id="panel-build" role="tabpanel" aria-labelledby="tab-build" class="skill-panel"><p>From a browser interaction to a complete application.</p><ul><li>JavaScript / TypeScript</li><li>React / Next.js</li><li>HTML / CSS</li><li>Git / GitHub</li></ul></div>
+          <div id="panel-secure" role="tabpanel" aria-labelledby="tab-secure" class="skill-panel" hidden><p>Understand the system. Check the assumptions.</p><ul><li>Windows hardening</li><li>Linux fundamentals</li><li>Networking basics</li><li>OpenSSL / TLS</li></ul></div>
+          <div id="panel-explore" role="tabpanel" aria-labelledby="tab-explore" class="skill-panel" hidden><p>Turn a question into an experiment you can reproduce.</p><ul><li>Python / Java</li><li>scikit-learn</li><li>Model evaluation</li><li>Applied AI / ML</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="background section-wrap section-space" id="background" aria-labelledby="background-title">
+      <div class="section-heading reveal"><h2 id="background-title">Beyond<br><span class="muted">the editor.</span></h2><p>Learning by competing, researching, teaching, and showing up.</p></div>
+      <div class="background-grid">
+        <div class="experience-list reveal">
+          <details open><summary><span>MIT Beaver Works Summer Institute</span><span class="detail-marker" aria-hidden="true">+</span></summary><div class="experience-body"><span class="meta">Cyber Operations / Summer 2026</span><p>Hands-on work in Linux, cryptography, web security, and privilege escalation, plus a team hackathon.</p></div></details>
+          <details><summary><span>CyberPatriot</span><span class="detail-marker" aria-hidden="true">+</span></summary><div class="experience-body"><span class="meta">Windows lead / CyberPatriot 17</span><p>Checked users, services, password policies, and permissions. Our team placed 3rd in Arkansas's State Platinum Tier.</p></div></details>
+          <details><summary><span>Dialogues Club &amp; Schoolhouse.world</span><span class="detail-marker" aria-hidden="true">+</span></summary><div class="experience-body"><span class="meta">Club president / Volunteer tutor</span><p>Help lead discussions on AI, immigration, social media, and the economy. My tutoring has reached 19 learners in 9 countries.</p></div></details>
+          <details><summary><span>STEM·E Youth Career Development</span><span class="detail-marker" aria-hidden="true">+</span></summary><div class="experience-body"><span class="meta">Programming / Web / SEO</span><p>Worked on website interfaces, Google Ads, and a digital library as part of a youth career-development experience.</p></div></details>
+        </div>
+        <aside class="recognition reveal" aria-labelledby="recognition-title">
+          <h3 id="recognition-title">A few milestones</h3>
+          <div class="award"><span class="award-number">2nd</span><div><strong>Mercer Science &amp; Engineering Fair</strong><p>Systems Software, 2026<br>TLS security classification research</p></div></div>
+          <div class="award"><span class="award-number">60+</span><div><strong>Community service hours</strong><p>School and community events, robotics tournaments, an animal shelter, and debate judging.</p></div></div>
+          <div class="certifications"><p class="meta">Continuing to learn</p><p>IT Specialist certifications in Java, Python, Cybersecurity, and Device Configuration &amp; Management.</p><p>AP Scholar (2025) and College Board National Recognition (2026).</p></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="contact section-wrap section-space" id="contact" aria-labelledby="contact-title">
+      <div class="contact-content reveal"><p class="eyebrow">Have an idea or a good question?</p><h2 id="contact-title">Let's make<br>something <span class="muted">useful.</span></h2><a class="button button-primary" href="mailto:asreehan4u@gmail.com">Get in touch <span aria-hidden="true">↗</span></a></div>
+      <div class="contact-bottom"><div><span class="meta">Email</span><div class="email-line"><a href="mailto:asreehan4u@gmail.com">asreehan4u@gmail.com</a><button id="copy-email" class="quiet-button">Copy email</button></div><span id="copy-status" role="status" aria-live="polite"></span></div><a class="text-link" href="https://github.com/SreehanAdigopula" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div>
+    </section>
+  </main>
+  <footer class="site-footer section-wrap"><a href="#home" class="wordmark" aria-label="Back to top">sa<span>.</span></a><p>Built with curiosity.<br>© 2026 Sreehan Adigopula</p><a href="#home" class="text-link">Back to top ↑</a></footer>
+
+  <dialog id="project-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-shell"><button class="dialog-close quiet-button" id="dialog-close" aria-label="Close project">Close <span aria-hidden="true">×</span></button><div id="dialog-content"></div></div>
+  </dialog>
+  <noscript><p class="noscript-note">JavaScript is off. All project summaries and links are available below. <a href="https://github.com/SreehanAdigopula">Explore the projects on GitHub.</a></p></noscript>
+</body>
+</html>
